@@ -11,6 +11,7 @@ public class Hooks {
 	@Before("@AddPlace")
 	public void beforeScenario1() {
 		System.out.println("This is before method for @AddPlace");
+		System.out.println("Thanks");
 	}
 	
 	@After("@AddPlace")
