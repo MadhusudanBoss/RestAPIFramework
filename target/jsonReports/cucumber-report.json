@@ -1,0 +1,177 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-27T12:53:42.832Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2580500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario1()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify if place is being successfully added using ADD place API",
+        "description": "",
+        "id": "validating-the-add-place-api-s;verify-if-place-is-being-successfully-added-using-add-place-api;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 99300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario1()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6822156000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add place payload with \"VishwasVijay\" \"German\" \"211 church street\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "VishwasVijay",
+                  "offset": 24
+                },
+                {
+                  "val": "German",
+                  "offset": 39
+                },
+                {
+                  "val": "211 church street",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinitions1.add_place_payload_with(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13319022000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User calls \"addPlaceAPI\" with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "addPlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "post",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefinitions1.user_calls_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4355800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "location": "StepDefinitions1.the_api_call_got_success_with_status_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3766526800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 1
+                },
+                {
+                  "val": "OK",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinitions1.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 119777800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "scope",
+                  "offset": 1
+                },
+                {
+                  "val": "APP",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinitions1.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3453656100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify place id created maps to \"VishwasVijay\" using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "VishwasVijay",
+                  "offset": 33
+                },
+                {
+                  "val": "getPlaceAPI",
+                  "offset": 54
+                }
+              ],
+              "location": "StepDefinitions1.verify_place_id_created_maps_to_something_using_something(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating the ADD place API\u0027s",
+    "description": "",
+    "id": "validating-the-add-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidations.feature",
+    "tags": []
+  }
+]
